@@ -30,6 +30,12 @@ void GameController::initData()
 		allColIndex[i] = 0;
 	}
 }
+int GameController::getResult()
+{
+	//Check for result
+
+	return 0;
+}
 int GameController::indexIncrement(int index)
 {
 	if (allColIndex[index] < ROW - 1)
@@ -86,8 +92,27 @@ void GameController::play()
 
 		//Process 
 		int col = int(input - '0');
-		if( setData(col) == 0)
+		if (setData(col) == 0) {
+		
+			//Check for result
+			switch (getResult()) {
+				case RED_WON:
+					cout << "\nRed won";
+					input = 'n';
+				break;
+				case BLUE_WON:
+					cout << "\nBlue won";
+					input = 'n';
+					break;
+				case DRAW:
+					cout << "\nDraw";
+					input = 'n';
+					break;
+				default:
+					break;
+			}
 			player *= -1;
+		}
 
 	} while (input != 'n' && input != 'N');
 
@@ -102,7 +127,7 @@ void GameController::getInput()
 int GameController::setData(int col)
 {
 	if (col > 0 && col <= COL) {
-		data[(ROW-1) - (allColIndex[col - 1] ) ][col - 1] = player==1 ? 'R' : 'B' ;
+		data[(ROW-1) - (allColIndex[col - 1] ) ][col - 1] = (player == 1) ? 'R' : 'B' ;
 		return indexIncrement(col-1);
 	}
 	else {

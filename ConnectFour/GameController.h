@@ -20,5 +20,13 @@ public:
 	void play();
 	void getInput();
 	void initData();
+	int getResult();
 };
 
+enum GAME_RESULT
+{
+	NONE = 0,
+	RED_WON = 1,
+	BLUE_WON = 2,
+	DRAW = 3
+};
