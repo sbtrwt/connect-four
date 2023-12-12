@@ -1,12 +1,13 @@
 #pragma once
 class GameController
 {
-	const int ROW = 6;
-	const int COL = 7;
+	const int MAXROW = 6;
+	const int MAXCOL = 7;
 	char data[6][7];
 	int allColIndex[7];
 	char input;
 	int player;
+
 
 public:
 
@@ -29,4 +30,9 @@ enum GAME_RESULT
 	RED_WON = 1,
 	BLUE_WON = 2,
 	DRAW = 3
+};
+enum DOTS
+{
+	RED='R',
+	BLUE='B'
 };
