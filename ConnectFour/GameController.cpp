@@ -118,7 +118,7 @@ void GameController::showBanner()
 	cout << "\n RULES:\n";
 	cout << "\n1. Two-player ( Red(R)  & Blue(B) ) game.";
 	cout << "\n2. Board size is 6 X 7.";
-	cout << "\n3. A player wins if he/she is able to connect 4 dots horizontally, vertically or digonally.";
+	cout << "\n3. A player wins if he/she is able to connect 4 dots horizontally, vertically or diagonally.";
 	cout << "\n4. Draw when the board is fully filled.";
 
 	cout << "\n\n How to Play:\n";
